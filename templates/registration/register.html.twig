@@ -1,0 +1,33 @@
+{% extends 'layouts/auth.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+    <div class="container">
+        <div class="row mt-4 d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <div class="card card-body">
+                    <h1> <a href=" {{ path('index') }} ">Accueil</a> </h1>
+                    {{ form_start(registrationForm) }}
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                    }) }}
+                    {{ form_row(registrationForm.agreeTerms) }}
+                    
+                    <button type="submit" class="btn btn-primary my-2">
+                        S'enregistrer
+                    </button>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
+
