@@ -1,0 +1,58 @@
+{% extends 'layouts/template.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block body %}
+
+    <!-- Jombotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Hair style</h1>
+            <p class="lead">Prenez rendez-vous rapidement.</p>
+            <button class="btn btn-primary">Prendre rdv</button>
+            <button class="btn btn-outline-primary">Contacter</button>
+        </div>
+    </div>
+    
+    <!-- Section prestations images -->
+    <div class="container">
+        <div class="row">
+            <div class="service">
+                <h1 class="service_title">Braids</h1>
+                <p class="service_description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec euismod, nisi vel consectetur interdum, nisl nisi
+                    aliquam nisi, euismod euismod nisi vel nisi.
+                </p>
+                <div class="service_price">
+                    <p class="service_price_title">Prix</p>
+                    <p class="service_price_value">
+                        <span class="service_price_value_amount">29,99</span>
+                        <span class="service_price_value_currency">€</span>
+                    </p>
+                </div>
+                <button class="btn btn-lg btn-success">Prendre rdv</button>
+            </div>
+
+            <div class="col-md-4 border border-rounded shadow shadow-lg">
+                <img src="{{ asset('assets/img/prest-1-1.jpg') }}" class="" alt="" height="200px" width="auto">
+                <img src="{{ asset('assets/img/prest-1-2.jpg') }}" class="" alt="" height="200px" width="auto">
+                <h3>Hair style</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                <button class="btn btn-primary">Consulter</button>
+            </div>
+            <div class="col-md-4 border border-rounded shadow shadow-lg">
+                <img src="img/hair.jpeg" class="" alt="" height="200px" width="auto">
+            </div>
+            <div class="col-md-4 border border-rounded shadow shadow-lg">
+                <img src="img/hair.jpeg" class="" alt="" height="200px" width="auto">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
